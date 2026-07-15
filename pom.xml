@@ -26,6 +26,7 @@
 
     <modules>
         <module>forgekit-core</module>
+        <module>forgekit-text</module>
     </modules>
 
 

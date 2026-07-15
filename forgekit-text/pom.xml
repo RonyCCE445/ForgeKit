@@ -15,9 +15,20 @@
 
     </parent>
 
-    <artifactId>forgekit-core</artifactId>
+    <artifactId>forgekit-text</artifactId>
 
-    <name>ForgeKit Core</name>
-    <description>Core utilities shared across ForgeKit modules.</description>
+    <name>ForgeKit Text</name>
+    <description>Text utilities shared across ForgeKit modules.</description>
 
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.github.ronycce445</groupId>
+            <artifactId>forgekit-core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
 </project>
