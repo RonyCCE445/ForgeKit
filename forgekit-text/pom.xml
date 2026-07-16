@@ -27,7 +27,6 @@
         <dependency>
             <groupId>io.github.ronycce445</groupId>
             <artifactId>forgekit-core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
