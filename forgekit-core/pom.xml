@@ -19,5 +19,12 @@
 
     <name>ForgeKit Core</name>
     <description>Core utilities shared across ForgeKit modules.</description>
-
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>6.1.1</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
 </project>
