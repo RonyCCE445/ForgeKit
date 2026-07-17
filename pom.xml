@@ -23,6 +23,7 @@
         <module>forgekit-core</module>
         <module>forgekit-text</module>
         <module>forgekit-cli</module>
+        <module>forgekit-file</module>
     </modules>
 
     <dependencyManagement>
