@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -38,4 +39,25 @@ public class FileUtilsTest {
         assertEquals("Test", actual);
 
     }
+
+    @Test
+    public void readLinesShouldReturnAllLines() throws IOException {
+        //Arrange
+        Path tempFile = Files.createTempFile("temp",".txt");
+
+
+       Files.write(tempFile, List.of(
+               "Apple",
+               "Banana",
+               "Orange"
+       ));
+
+
+        //Act
+       List<String> actual = FileUtils.readLines(tempFile);
+        //Assert
+       assertEquals(List.of("Apple","Banana","Orange"), actual);
+
+    }
+
 }
