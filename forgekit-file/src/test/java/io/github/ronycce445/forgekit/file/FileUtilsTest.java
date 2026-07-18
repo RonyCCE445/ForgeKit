@@ -60,4 +60,13 @@ public class FileUtilsTest {
 
     }
 
+    @Test
+    public void lineCountShouldReturnCorrectNumberOfLines() throws IOException {
+        Path tempFile = Files.createTempFile("temp",".txt");
+        Files.write(tempFile, List.of("Apple","Banana","Orange","Kiwi"));
+
+        long actual = FileUtils.lineCount(tempFile);
+        assertEquals(4L, actual);
+    }
+
 }

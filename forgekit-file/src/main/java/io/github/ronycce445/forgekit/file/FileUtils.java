@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.stream.Stream;
 
 public final class FileUtils {
     private FileUtils() {
@@ -17,5 +18,10 @@ public final class FileUtils {
     }
     public static List<String> readLines(Path path) throws IOException {
         return Files.readAllLines(path);
+    }
+    public static long lineCount(Path path) throws IOException{
+        try(Stream<String> lines = Files.lines(path)){
+            return lines.count();
+        }
     }
 }

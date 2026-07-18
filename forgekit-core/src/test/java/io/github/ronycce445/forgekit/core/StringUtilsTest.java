@@ -40,6 +40,7 @@ class StringUtilsTest {
         assertEquals(2,result);
 
     }
-    }
+
+}
 
 
