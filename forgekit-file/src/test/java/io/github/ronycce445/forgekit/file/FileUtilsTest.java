@@ -13,17 +13,29 @@ public class FileUtilsTest {
     public void readShouldReturnFileContents() throws IOException {
         //Arrange
     Path tempFile = Files.createTempFile("temp",".txt");
+        //Act
         Files.writeString(tempFile, "test");
 
-        //Act
 
+
+        //Assert
         String actual = FileUtils.read(tempFile);
+        assertEquals("test", actual);
+    }
+
+    @Test
+    public void writeShouldWriteFileContents() throws IOException {
+        //Arrange
+        Path tempFile = Files.createTempFile("temp",".txt");
+
+        //Act
+        FileUtils.write(tempFile,"Test");
 
         //Assert
 
-        assertEquals("test", actual);
+        String actual = Files.readString(tempFile);
 
-
+        assertEquals("Test", actual);
 
     }
 }
