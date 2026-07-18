@@ -69,4 +69,18 @@ public class FileUtilsTest {
         assertEquals(4L, actual);
     }
 
+    @Test
+    public void wordCountShouldReturnCorrectNumberOfLines() throws IOException {
+        Path tempFile = Files.createTempFile("temp",".txt");
+        Files.write(tempFile, List.of(
+                "Java is awesome",
+                "ForgeKit is growing",
+                "Apache Maven rocks"
+        ));
+
+        long actual = FileUtils.wordCount(tempFile);
+
+        assertEquals(9L,actual);
+    }
+
 }

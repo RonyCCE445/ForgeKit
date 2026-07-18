@@ -24,4 +24,16 @@ public final class FileUtils {
             return lines.count();
         }
     }
+
+    public static long wordCount(Path path) throws IOException{
+        List<String> lines = readLines(path);
+        long count = 0;
+        for(String line : lines){
+            if (line.isBlank()) {
+                continue;
+            }
+            count += line.trim().split("\\s+").length;
+        }
+        return count;
+    }
 }
