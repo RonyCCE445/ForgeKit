@@ -11,4 +11,7 @@ public final class FileUtils {
     public static String read(Path path) throws IOException {
         return Files.readString(path);
     }
+    public static void write(Path path, String content) throws IOException{
+        Files.writeString(path, content);
+    }
 }
