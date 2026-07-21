@@ -24,6 +24,7 @@
         <module>forgekit-text</module>
         <module>forgekit-cli</module>
         <module>forgekit-file</module>
+        <module>forgekit-json</module>
     </modules>
 
     <dependencyManagement>
