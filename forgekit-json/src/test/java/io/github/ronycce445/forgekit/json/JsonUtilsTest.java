@@ -1,4 +1,4 @@
-package io.github.ronycce445.forgekit.file;
+package io.github.ronycce445.forgekit.json;
 
 import org.junit.jupiter.api.Test;
 

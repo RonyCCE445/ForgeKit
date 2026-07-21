@@ -1,10 +1,12 @@
 package io.github.ronycce445.forgekit.cli;
 
-import io.github.ronycce445.forgekit.text.TextFormatter;
+public final class Main {
 
-public class Main {
+    private Main() {
+        // Prevent instantiation
+    }
+
     public static void main(String[] args) {
-        TextFormatter formatter = new TextFormatter();
-        System.out.println(formatter.reverseText("ForgeKit"));
+        CommandDispatcher.dispatch(args);
     }
 }

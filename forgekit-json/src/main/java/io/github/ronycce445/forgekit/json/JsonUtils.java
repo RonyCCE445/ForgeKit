@@ -1,4 +1,4 @@
-package io.github.ronycce445.forgekit.file;
+package io.github.ronycce445.forgekit.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

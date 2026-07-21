@@ -10,7 +10,7 @@
     <parent>
         <groupId>io.github.ronycce445</groupId>
         <artifactId>forgekit</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
 
     </parent>
@@ -27,7 +27,19 @@
         <dependency>
             <groupId>io.github.ronycce445</groupId>
             <artifactId>forgekit-text</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.ronycce445</groupId>
+            <artifactId>forgekit-file</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.ronycce445</groupId>
+            <artifactId>forgekit-json</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
