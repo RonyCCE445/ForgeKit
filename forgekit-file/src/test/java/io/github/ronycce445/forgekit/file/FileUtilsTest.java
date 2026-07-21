@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FileUtilsTest {
     @Test
@@ -81,6 +81,34 @@ public class FileUtilsTest {
         long actual = FileUtils.wordCount(tempFile);
 
         assertEquals(9L,actual);
+    }
+
+    @Test
+    public void isEmptyShouldReturnTrueForEmptyFile() throws IOException {
+        Path tempFile = Files.createTempFile("temp",".txt");
+
+        boolean actual = FileUtils.isEmpty(tempFile);
+        assertTrue(actual);
+    }
+
+    @Test
+    public void isEmptyShouldReturnFalseForNonEmptyFile() throws IOException {
+        Path tempFile = Files.createTempFile("temp",".txt");
+        Files.writeString(tempFile, "test");
+        boolean actual = FileUtils.isEmpty(tempFile);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    public void sha256ShouldReturnSameHashForSameContent() throws Exception {
+        Path tempFile = Files.createTempFile("temp", ".txt");
+        Files.writeString(tempFile, "ForgeKit");
+
+        String hash1 = FileUtils.sha256(tempFile);
+        String hash2 = FileUtils.sha256(tempFile);
+
+        assertEquals(hash1, hash2);
     }
 
 }
